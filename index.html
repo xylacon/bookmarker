@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<title>Site Bookmarker</title>
+	</head>
+	<body onload="displayBookmarks()">
+		<header>
+			<h3 class="text-muted">Bookmarker</h3>
+			<hr>
+		</header>
+		<div class="container">
+			<div id="form-add-site">
+				<h2>Bookmark Your Favorite Sites</h2>
+				<form id="new">
+					<div class="form-input">
+						<label>Site Name:</label>
+						<input type="text" id="new-name" placeholder="Website Name" required>
+					</div>
+					<div class="form-input">
+						<label>Site URL:</label>
+						<input type="url" id="new-url" placeholder="www.example.com" required>
+					</div>
+					<button type="submit" class="btn">Submit</button>
+				</form>
+			</div>
+			<div id="display">
+				<div id="bookmarks"></div>
+			</div>
+		</div>
+		<footer>
+			<p class="text-muted">&copy; 2021 Richard Denton</p>
+		</footer>
+		<script src="main.js"></script>
+	</body>
+</html>
