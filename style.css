@@ -227,6 +227,7 @@ footer
 	{
 		margin-top: 5px;
 		background: var(--txt-secondary);
+		color: var(--bg-secondary);
 	}
 	a.delete
 	{
