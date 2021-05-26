@@ -218,6 +218,11 @@ footer
 	{
 		flex-direction: column;
 	}
+	.form-input label
+	{
+		width: 100%;
+		text-align: center;
+	}
 	.form-input input
 	{
 		margin-top: 5px;
