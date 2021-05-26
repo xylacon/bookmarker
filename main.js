@@ -60,7 +60,7 @@ function displayBookmarks()
 		display.innerHTML +=
 		`
 			<div class="bookmark">
-				<span>${name}</span><a class="btn visit" target="_blank" href="${url}">Visit</a><a onclick="deleteBookmark('${url}')" class="btn delete" href="#">Delete</a>
+				<span>${name}</span><a class="btn visit" target="_blank" href="${url}">Visit</a><a onclick="deleteBookmark('${url}')" class="btn delete" href="#">Delete</a><a onclick="deleteBookmark('${url}')" class="btn delete mobile" href="#"><i class="fas fa-minus-circle"></i></a>
 			</div>
 		`;
 	}
