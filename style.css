@@ -153,6 +153,7 @@ header
 }
 .visit
 {
+	padding: 7px 0 !important;
 	color: var(--bg-primary) !important;
 }
 .visit:hover
@@ -228,6 +229,11 @@ footer
 		margin-top: 5px;
 		background: var(--txt-secondary);
 		color: var(--bg-secondary);
+	}
+
+	a.visit
+	{
+		width: 35%;
 	}
 	a.delete
 	{
