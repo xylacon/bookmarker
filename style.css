@@ -167,6 +167,10 @@ header
 {
 	background: rgba(0, 0, 0, 0.1) !important;
 }
+a.mobile
+{
+	display: none;
+}
 /* end Bookmarks */
 /* end Content */
 
@@ -207,3 +211,24 @@ footer
 	cursor: pointer;
 }
 /* end Utilities */
+
+@media(max-width: 500px)
+{
+	.form-input
+	{
+		flex-direction: column;
+	}
+	.form-input input
+	{
+		margin-top: 5px;
+		background: var(--txt-secondary);
+	}
+	a.delete
+	{
+		display: none;
+	}
+	a.mobile
+	{
+		display: inline;
+	}
+}
