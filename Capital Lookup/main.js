@@ -44,5 +44,3 @@ const outputHtml = matches =>
 
 // Main
 search.addEventListener('input', () => searchStates(search.value));
-
-console.log("hello");
