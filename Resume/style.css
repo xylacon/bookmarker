@@ -1,0 +1,171 @@
+/* Colors */
+html[data-theme="light"]
+{
+	--bg: rgb(255, 255, 255);
+
+	--txt: rgb(0, 0, 0);
+
+	--uh-red: rgb(200, 16, 46);
+	--uh-teal: rgb(0, 134, 108);
+	--uh-gold: rgb(185, 120, 0);
+	--uh-gray: rgb(136, 139, 141);
+}
+/* end Colors */
+
+/* Global */
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+
+	background: var(--bg);
+	color: var(--txt);
+}
+/* end Global */
+
+/* Header */
+header
+{
+	margin: 20px 0 50px 0;
+}
+#my-name
+{
+	text-align: center;
+	line-height: 0.9;
+}
+#my-name span
+{
+	display: block;
+}
+#f-name
+{
+	font-size: 2em;
+}
+#l-name
+{
+	font-size: 3em;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+#specs
+{
+	text-align: center;
+}
+/* end Header */
+
+/* Content */
+#container
+{
+	display: flex;
+	flex-direction: column;
+
+	width: 95vw;
+	max-width: 480px;
+	margin: auto;
+}
+
+#education .item
+{
+	margin: 20px auto;
+
+	border: 1px solid var(--txt);
+	border-left: none;
+	border-right: none;
+}
+#education .logo
+{
+	width: 100px;
+}
+#education .desc
+{
+	width: 100%;
+}
+#education .desc h3
+{
+	color: var(--uh-red);
+}
+#education .desc h4
+{
+	color: var(--uh-gold);
+}
+#education .desc h5
+{
+	color: var(--uh-gray);
+}
+#education .desc h6
+{
+	text-align: right;
+	color: var(--uh-teal);
+}
+
+/* Card Style (mobile) */
+#container section
+{
+	padding: 10px 10px 50px 10px;
+
+	border: 1px solid black;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+
+	box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.5);
+}
+#projects
+{
+	background: white;
+}
+#skills
+{
+	transform: translateY(-40px);
+	background: white;
+}
+#education
+{
+	transform: translateY(-80px);
+	background: white;
+}
+#work-exp
+{
+	transform: translateY(-120px);
+	background: white;
+}
+#container section h1
+{
+	text-align: center;
+}
+#container section h1:hover
+{
+	cursor: pointer;
+}
+.content
+{
+	display: none;
+}
+#pocket
+{
+	height: 100px;
+	width: 100%;
+	margin: auto;
+
+	transform: translateY(-160px);
+
+	border-top: 1px dashed black;
+
+	background: white;
+}
+/* end Card Style (mobile) */
+/* end Content */
+
+/* Utilities */
+
+/* end Utilities */
+
+/* Media Queries */
+
+/* end Media Queries */
