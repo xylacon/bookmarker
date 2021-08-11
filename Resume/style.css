@@ -1,14 +1,28 @@
 /* Colors */
 html[data-theme="light"]
 {
-	--bg: rgb(255, 255, 255);
-
-	--txt: rgb(0, 0, 0);
+	--bg: rgb(228, 228, 228);
+	--txt: rgb(255, 255, 255);
 
 	--uh-red: rgb(200, 16, 46);
 	--uh-teal: rgb(0, 134, 108);
 	--uh-gold: rgb(185, 120, 0);
 	--uh-gray: rgb(136, 139, 141);
+
+	--header-bg: rgb(253, 198, 46);
+	--header-txt: rgb(255, 255, 255);
+	
+	--projects-bg: rgb(0, 187, 146);
+	--projects-txt: rgb(255, 255, 255);
+	
+	--skills-bg: rgb(0, 150, 209);
+	--skills-txt: rgb(206, 206, 206);
+	
+	--education-bg: rgb(255, 255, 255);
+	--education-txt: rgb(126, 126, 126);
+	
+	--work-exp-bg: rgb(255, 255, 255);
+	--work-exp-txt: rgb(65, 65, 65);
 }
 /* end Colors */
 
@@ -22,6 +36,8 @@ html[data-theme="light"]
 
 body
 {
+	overflow: scroll;
+
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 20px;
 
@@ -30,19 +46,30 @@ body
 }
 /* end Global */
 
-/* Header */
-header
+/* Content */
+#container
 {
-	margin: 20px 0 50px 0;
+	height: 90vh;
+	width: 90vw;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: [header-start] 150px;
+	grid-template-areas:
+		"header"
+		"projects"
+		"skills"
+		"education"
+		"work-exp";
+	transform: translate(5vw, 5vh);
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	border-radius: 15px;
 }
+
 #my-name
 {
-	text-align: center;
 	line-height: 0.9;
-}
-#my-name span
-{
-	display: block;
 }
 #f-name
 {
@@ -50,31 +77,14 @@ header
 }
 #l-name
 {
+	display: block;
 	font-size: 3em;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
-#specs
-{
-	text-align: center;
-}
-/* end Header */
-
-/* Content */
-#container
-{
-	display: flex;
-	flex-direction: column;
-
-	width: 95vw;
-	max-width: 480px;
-	margin: auto;
-}
 
 #education .item
 {
-	margin: 20px auto;
-
 	border: 1px solid var(--txt);
 	border-left: none;
 	border-right: none;
@@ -106,58 +116,80 @@ header
 }
 
 /* Card Style (mobile) */
-#container section
+#header
 {
-	padding: 10px 10px 50px 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
 
-	border: 1px solid black;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
+	text-align: center;
 
-	box-shadow: 0px -3px 3px rgba(0, 0, 0, 0.5);
+	background: var(--header-bg);
+	color: var(--header-txt);
+
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
 }
 #projects
 {
-	background: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+
+	background: var(--projects-bg);
+	color: var(--projects-txt);
 }
 #skills
 {
-	transform: translateY(-40px);
-	background: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+
+	background: var(--skills-bg);
+	color: var(--skills-txt);
 }
 #education
 {
-	transform: translateY(-80px);
-	background: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+
+	background: var(--education-bg);
+	color: var(--education-txt);
 }
 #work-exp
 {
-	transform: translateY(-120px);
-	background: white;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+
+	background: var(--work-exp-bg);
+	color: var(--work-exp-txt);
+
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
-#container section h1
+section h1
 {
-	text-align: center;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	align-items: center;
 }
-#container section h1:hover
+section h1:hover
 {
 	cursor: pointer;
 }
 .content
 {
 	display: none;
-}
-#pocket
-{
-	height: 100px;
-	width: 100%;
-	margin: auto;
-
-	transform: translateY(-160px);
-
-	border-top: 1px dashed black;
-
-	background: white;
+	margin: 10px;
 }
 /* end Card Style (mobile) */
 /* end Content */
