@@ -11,9 +11,14 @@ workExp.childNodes[1].addEventListener('click', changeDisplay);
 function changeDisplay(e)
 {
 	var content = e.target.nextElementSibling;
-	
+	var allContent = document.getElementsByClassName('content');
+
 	if (content.style.display === '' || content.style.display === 'none')
 	{
+		for (i = 0; i < allContent.length; i++)
+		{
+			allContent[i].style.display = 'none';
+		}
 		content.style.display = 'block';
 	}
 	else

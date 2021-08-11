@@ -1,28 +1,23 @@
 /* Colors */
 html[data-theme="light"]
 {
-	--bg: rgb(228, 228, 228);
+	--bg: rgb(44, 44, 44);
 	--txt: rgb(255, 255, 255);
 
-	--uh-red: rgb(200, 16, 46);
-	--uh-teal: rgb(0, 134, 108);
-	--uh-gold: rgb(185, 120, 0);
-	--uh-gray: rgb(136, 139, 141);
-
-	--header-bg: rgb(253, 198, 46);
-	--header-txt: rgb(255, 255, 255);
+	--header-bg: rgb(255, 220, 122);
+	--header-txt: rgb(88, 76, 43);
 	
-	--projects-bg: rgb(0, 187, 146);
-	--projects-txt: rgb(255, 255, 255);
+	--projects-bg: rgb(255, 199, 46);
+	--projects-txt: rgb(128, 100, 23);
 	
-	--skills-bg: rgb(0, 150, 209);
-	--skills-txt: rgb(206, 206, 206);
+	--skills-bg: rgb(204, 159, 37);
+	--skills-txt: rgb(255, 220, 122);
 	
-	--education-bg: rgb(255, 255, 255);
-	--education-txt: rgb(126, 126, 126);
+	--education-bg: rgb(128, 100, 23);
+	--education-txt: rgb(255, 199, 46);
 	
-	--work-exp-bg: rgb(255, 255, 255);
-	--work-exp-txt: rgb(65, 65, 65);
+	--work-exp-bg: rgb(88, 76, 43);
+	--work-exp-txt: rgb(204, 159, 37);
 }
 /* end Colors */
 
@@ -85,13 +80,16 @@ body
 
 #education .item
 {
+	display: grid;
+	grid-template-columns: 75px 1fr;
+
 	border: 1px solid var(--txt);
 	border-left: none;
 	border-right: none;
 }
 #education .logo
 {
-	width: 100px;
+	width: 75px;
 }
 #education .desc
 {
