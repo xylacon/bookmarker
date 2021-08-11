@@ -136,6 +136,7 @@ body
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
+	
 	overflow: scroll;
 
 	background: var(--projects-bg);
@@ -147,6 +148,8 @@ body
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
+	
+	overflow: scroll;
 
 	background: var(--skills-bg);
 	color: var(--skills-txt);
@@ -157,6 +160,8 @@ body
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
+	
+	overflow: scroll;
 
 	background: var(--education-bg);
 	color: var(--education-txt);
@@ -167,6 +172,8 @@ body
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
+
+	overflow: scroll;
 
 	background: var(--work-exp-bg);
 	color: var(--work-exp-txt);
