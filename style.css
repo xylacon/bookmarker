@@ -78,6 +78,11 @@ body
 	letter-spacing: 5px;
 }
 
+.content
+{
+	padding-bottom: 20px;
+}
+
 #education .item
 {
 	display: grid;
@@ -135,6 +140,7 @@ body
 	grid-template-columns: 1fr;
 	justify-items: center;
 	align-items: center;
+	overflow: scroll;
 
 	background: var(--projects-bg);
 	color: var(--projects-txt);
