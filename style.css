@@ -78,6 +78,11 @@ body
 	letter-spacing: 5px;
 }
 
+section
+{
+	min-height: 50px;
+}
+
 .content
 {
 	padding-bottom: 10px;
