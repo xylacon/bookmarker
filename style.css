@@ -87,10 +87,6 @@ body
 {
 	display: grid;
 	grid-template-columns: 75px 1fr;
-
-	border: 1px solid var(--txt);
-	border-left: none;
-	border-right: none;
 }
 #education .logo
 {
