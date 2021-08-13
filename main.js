@@ -26,3 +26,15 @@ function changeDisplay(e)
 		content.style.display = 'none';
 	}
 }
+
+function changeFont()
+{
+	if (document.body.style.fontFamily === '' || document.body.style.fontFamily === 'Ubuntu')
+	{
+		document.body.style.fontFamily = 'Quicksand';
+	}
+	else
+	{
+		document.body.style.fontFamily = 'Ubuntu';
+	}
+}
