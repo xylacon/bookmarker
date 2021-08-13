@@ -31,7 +31,7 @@ html[data-theme="light"]
 
 body
 {
-	font-family: 'Courier New', Courier, monospace;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 20px;
 
 	background: var(--bg);
@@ -72,7 +72,7 @@ a:hover
 
 #my-name
 {
-	line-height: 0.9;
+	line-height: 1.05;
 }
 #f-name
 {
