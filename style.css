@@ -32,6 +32,7 @@ html[data-theme="light"]
 body
 {
 	font-family: 'Ubuntu', sans-serif;
+	font-size: 18px;
 
 	background: var(--bg);
 	color: var(--txt);
