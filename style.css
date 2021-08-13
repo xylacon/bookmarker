@@ -31,13 +31,21 @@ html[data-theme="light"]
 
 body
 {
-	overflow: scroll;
-
 	font-family: 'Courier New', Courier, monospace;
 	font-size: 20px;
 
 	background: var(--bg);
 	color: var(--txt);
+}
+
+a
+{
+	text-decoration: none;
+	color: inherit;
+}
+a:hover
+{
+	font-weight: bold;
 }
 /* end Global */
 
@@ -76,16 +84,6 @@ body
 	font-size: 3em;
 	text-transform: uppercase;
 	letter-spacing: 5px;
-}
-
-section
-{
-	min-height: 50px;
-}
-
-.content
-{
-	padding-bottom: 10px;
 }
 
 #education .item
@@ -142,8 +140,6 @@ section
 	justify-items: center;
 	align-items: center;
 	
-	overflow: scroll;
-
 	background: var(--projects-bg);
 	color: var(--projects-txt);
 }
@@ -154,8 +150,6 @@ section
 	justify-items: center;
 	align-items: center;
 	
-	overflow: scroll;
-
 	background: var(--skills-bg);
 	color: var(--skills-txt);
 }
@@ -166,8 +160,6 @@ section
 	justify-items: center;
 	align-items: center;
 	
-	overflow: scroll;
-
 	background: var(--education-bg);
 	color: var(--education-txt);
 }
@@ -178,13 +170,16 @@ section
 	justify-items: center;
 	align-items: center;
 
-	overflow: scroll;
-
 	background: var(--work-exp-bg);
 	color: var(--work-exp-txt);
 
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
+}
+
+section
+{
+	min-height: 50px;
 }
 section h1
 {
@@ -193,6 +188,7 @@ section h1
 	display: grid;
 	justify-items: center;
 	align-items: center;
+	padding: 10px;
 }
 section h1:hover
 {
@@ -201,7 +197,11 @@ section h1:hover
 .content
 {
 	display: none;
-	margin: 10px;
+	height: 100%;
+	padding: 0 10px 10px 10px;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 /* end Card Style (mobile) */
 /* end Content */
