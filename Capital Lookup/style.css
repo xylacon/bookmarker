@@ -83,6 +83,10 @@ small
 	background: var(--bg-2);
 	color: var(--text);
 }
+.form input:focus
+{
+	outline: none;
+}
 
 #match-list
 {

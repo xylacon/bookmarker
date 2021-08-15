@@ -13,6 +13,11 @@ const searchStates = async searchText =>
 			const regex = new RegExp(`^${searchText}`, 'gi');
 			return state.name.match(regex) || state.abbr.match(regex);
 		});
+
+	if(matches.length === 0)
+	{
+		matchList.innerHTML = '';
+	}
 	
 	if(searchText.length === 0)
 	{
