@@ -25,7 +25,7 @@ function changeDisplay(e)
 			allParent[i].style.boxShadow = 'none';
 		}
 		content.style.display = 'block';
-		content.parentNode.style.boxShadow = 'inset 0 0 5px black';
+		content.parentNode.style.boxShadow = 'inset 0 0 4px black';
 	}
 	else
 	{
