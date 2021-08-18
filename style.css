@@ -33,6 +33,7 @@ body
 {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 18px;
+	line-height: 1.25;
 
 	background: var(--bg);
 	color: var(--txt);
@@ -97,13 +98,13 @@ ul
 	display: grid;
 	grid-template-columns: 75px 1fr;
 }
-#education .desc
-{
-	line-height: 1.25;
-}
 #education .logo
 {
 	width: 75px;
+}
+#education h5
+{
+	font-weight: lighter;
 }
 #education h6
 {
