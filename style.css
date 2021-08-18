@@ -1,23 +1,23 @@
 /* Colors */
 html[data-theme="yellow"]
 {
-	--bg: rgb(44, 44, 44);
-	--txt: rgb(255, 255, 255);
+	--bg: rgb(44, 38, 21);
+	--txt: rgb(250, 237, 202);
 
 	--header-bg: rgb(255, 228, 154);
 	--header-txt: rgb(88, 76, 43);
 	
 	--projects-bg: rgb(255, 199, 46);
-	--projects-txt: rgb(128, 100, 23);
+	--projects-txt: rgb(88, 76, 43);
 	
 	--skills-bg: rgb(204, 159, 37);
-	--skills-txt: rgb(255, 228, 154);
+	--skills-txt: rgb(44, 38, 21);
 	
 	--education-bg: rgb(128, 100, 23);
-	--education-txt: rgb(255, 199, 46);
+	--education-txt: rgb(255, 228, 154);
 	
 	--work-exp-bg: rgb(88, 76, 43);
-	--work-exp-txt: rgb(204, 159, 37);
+	--work-exp-txt: rgb(255, 199, 46);
 }
 /* end Colors */
 
