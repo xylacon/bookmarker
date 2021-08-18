@@ -46,26 +46,26 @@ function changeDisplay(e)
 // 	}
 // }
 
-let x = 0;
-function changeColor()
-{
-	themeTransition();
-	let numThemes = ['yellow', 'blue', 'red', 'multi'];
+// let x = 0;
+// function changeColor()
+// {
+// 	themeTransition();
+// 	let numThemes = ['yellow', 'blue', 'red', 'multi'];
 
-	if ((x + 1) >= numThemes.length)
-	{
-		x = 0;
-	}
-	else
-	{
-		x++;
-	}
+// 	if ((x + 1) >= numThemes.length)
+// 	{
+// 		x = 0;
+// 	}
+// 	else
+// 	{
+// 		x++;
+// 	}
 
-	document.documentElement.setAttribute('data-theme', numThemes[x]);
-}
+// 	document.documentElement.setAttribute('data-theme', numThemes[x]);
+// }
 
-function themeTransition()
-{
-    document.documentElement.classList.add("transition");
-    window.setTimeout(() => document.documentElement.classList.remove("transition"), 1000);
-}
+// function themeTransition()
+// {
+//     document.documentElement.classList.add("transition");
+//     window.setTimeout(() => document.documentElement.classList.remove("transition"), 1000);
+// }

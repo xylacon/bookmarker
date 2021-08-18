@@ -19,66 +19,6 @@ html[data-theme="yellow"]
 	--work-exp-bg: rgb(88, 76, 43);
 	--work-exp-txt: rgb(204, 159, 37);
 }
-html[data-theme="blue"]
-{
-	--bg: rgb(44, 44, 44);
-	--txt: rgb(255, 255, 255);
-
-	--header-bg: rgb(154, 223, 255);
-	--header-txt: rgb(43, 70, 88);
-	
-	--projects-bg: rgb(46, 196, 255);
-	--projects-txt: rgb(23, 90, 128);
-	
-	--skills-bg: rgb(37, 151, 204);
-	--skills-txt: rgb(154, 223, 255);
-	
-	--education-bg: rgb(23, 90, 128);
-	--education-txt: rgb(46, 196, 255);
-	
-	--work-exp-bg: rgb(43, 70, 88);
-	--work-exp-txt: rgb(37, 151, 204);
-}
-html[data-theme="red"]
-{
-	--bg: rgb(44, 44, 44);
-	--txt: rgb(255, 255, 255);
-
-	--header-bg: rgb(255, 161, 154);
-	--header-txt: rgb(88, 46, 43);
-	
-	--projects-bg: rgb(255, 60, 46);
-	--projects-txt: rgb(128, 30, 23);
-	
-	--skills-bg: rgb(204, 48, 37);
-	--skills-txt: rgb(255, 161, 154);
-	
-	--education-bg: rgb(128, 30, 23);
-	--education-txt: rgb(255, 60, 46);
-	
-	--work-exp-bg: rgb(88, 46, 43);
-	--work-exp-txt: rgb(204, 48, 37);
-}
-html[data-theme="multi"]
-{
-	--bg: rgb(44, 44, 44);
-	--txt: rgb(255, 255, 255);
-
-	--header-bg: rgb(197, 255, 89);
-	--header-txt: rgb(55, 43, 88);
-	
-	--projects-bg: rgb(65, 194, 108);
-	--projects-txt: rgb(37, 204, 182);
-	
-	--skills-bg: rgb(37, 204, 182);
-	--skills-txt: rgb(23, 69, 128);
-	
-	--education-bg: rgb(23, 69, 128);
-	--education-txt: rgb(55, 43, 88);
-	
-	--work-exp-bg: rgb(55, 43, 88);
-	--work-exp-txt: rgb(197, 255, 89);
-}
 /* end Colors */
 
 /* Global */
@@ -102,6 +42,11 @@ a
 {
 	text-decoration: none;
 	color: inherit;
+}
+
+ul
+{
+	list-style-position: inside;
 }
 /* end Global */
 
@@ -142,22 +87,39 @@ a
 	letter-spacing: 5px;
 }
 
+#projects .content
+{
+	text-align: center;
+}
+
 #education .item
 {
 	display: grid;
 	grid-template-columns: 75px 1fr;
 }
+#education .desc
+{
+	line-height: 1.25;
+}
 #education .logo
 {
 	width: 75px;
 }
-#education .desc
-{
-	width: 100%;
-}
-#education .desc h6
+#education h6
 {
 	text-align: right;
+	color: var(--header-bg);
+}
+
+#work-exp h6
+{
+	text-align: right;
+	color: var(--projects-bg);
+}
+
+.item:not(:first-of-type)
+{
+	margin-top: 10px;
 }
 
 /* Card Style (mobile) */
@@ -180,8 +142,6 @@ a
 {
 	display: grid;
 	grid-template-columns: 1fr;
-	justify-items: center;
-	align-items: center;
 	
 	background: var(--projects-bg);
 	color: var(--projects-txt);
@@ -190,9 +150,7 @@ a
 {
 	display: grid;
 	grid-template-columns: 1fr;
-	justify-items: center;
-	align-items: center;
-	
+
 	background: var(--skills-bg);
 	color: var(--skills-txt);
 }
@@ -200,8 +158,6 @@ a
 {
 	display: grid;
 	grid-template-columns: 1fr;
-	justify-items: center;
-	align-items: center;
 	
 	background: var(--education-bg);
 	color: var(--education-txt);
@@ -210,8 +166,6 @@ a
 {
 	display: grid;
 	grid-template-columns: 1fr;
-	justify-items: center;
-	align-items: center;
 
 	background: var(--work-exp-bg);
 	color: var(--work-exp-txt);
@@ -241,7 +195,9 @@ section h1:hover
 {
 	display: none;
 	height: 100%;
+
 	padding: 0 10px 10px 10px;
+
 	overflow: scroll;
 	overflow-x: hidden;
 	overflow-y: auto;
