@@ -1,8 +1,8 @@
 /* Colors */
 html[data-theme="yellow"]
 {
-	--bg: rgb(44, 38, 21);
-	--txt: rgb(250, 237, 202);
+	--bg: rgb(44, 44, 44);
+	--txt: rgb(235, 235, 235);
 
 	--header-bg: rgb(255, 228, 154);
 	--header-txt: rgb(88, 76, 43);
