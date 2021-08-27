@@ -311,6 +311,10 @@ ul
 		border-bottom-right-radius: 0;
 	}
 
+	section
+	{
+		box-shadow: none;
+	}
 	section h1
 	{
 		justify-items: stretch;
