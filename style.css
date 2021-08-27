@@ -4,20 +4,27 @@ html[data-theme="yellow"]
 	--bg: rgb(44, 44, 44);
 	--txt: rgb(235, 235, 235);
 
-	--header-bg: rgb(255, 228, 154);
-	--header-txt: rgb(88, 76, 43);
+	--primary-1: rgb(255, 228, 154);
+	--primary-2: rgb(255, 199, 46);
+	--primary-3: rgb(204, 159, 37);
+	--primary-4: rgb(128, 100, 23);
+	--primary-5: rgb(88, 76, 43);
+	--primary-6: rgb(44, 38, 21);
+
+	--header-bg: var(--primary-1);
+	--header-txt: var(--primary-4);
 	
-	--projects-bg: rgb(255, 199, 46);
-	--projects-txt: rgb(88, 76, 43);
+	--projects-bg: var(--primary-2);
+	--projects-txt: var(--primary-5);
 	
-	--skills-bg: rgb(204, 159, 37);
-	--skills-txt: rgb(44, 38, 21);
+	--skills-bg: var(--primary-3);
+	--skills-txt: var(--primary-6);
 	
-	--education-bg: rgb(128, 100, 23);
-	--education-txt: rgb(255, 228, 154);
+	--education-bg: var(--primary-4);
+	--education-txt: var(--primary-1);
 	
-	--work-exp-bg: rgb(88, 76, 43);
-	--work-exp-txt: rgb(255, 199, 46);
+	--work-exp-bg: var(--primary-5);
+	--work-exp-txt: var(--primary-2);
 }
 /* end Colors */
 
@@ -28,7 +35,6 @@ html[data-theme="yellow"]
 	padding: 0;
 	box-sizing: border-box;
 }
-
 body
 {
 	font-family: 'Ubuntu', sans-serif;
@@ -38,40 +44,9 @@ body
 	background: var(--bg);
 	color: var(--txt);
 }
-
-a
-{
-	text-decoration: none;
-	color: inherit;
-}
-
-ul
-{
-	list-style-position: inside;
-}
 /* end Global */
 
 /* Content */
-#container
-{
-	height: 80vh;
-	width: 90vw;
-	
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: [header-start] 150px;
-	grid-template-areas:
-		"header"
-		"projects"
-		"skills"
-		"education"
-		"work-exp";
-	transform: translate(5vw, 2.5vh);
-
-	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-	border-radius: 15px;
-}
-
 #my-name
 {
 	line-height: 1.05;
@@ -109,13 +84,11 @@ ul
 #education h6
 {
 	text-align: right;
-	color: var(--header-bg);
 }
 
 #work-exp h6
 {
 	text-align: right;
-	color: var(--projects-bg);
 }
 
 .item:not(:first-of-type)
@@ -124,6 +97,26 @@ ul
 }
 
 /* Card Style (mobile) */
+#container
+{
+	height: 80vh;
+	width: 90vw;
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: [header-start] 150px;
+	grid-template-areas:
+		"header"
+		"projects"
+		"skills"
+		"education"
+		"work-exp";
+	transform: translate(5vw, 2.5vh);
+
+	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	border-radius: 15px;
+}
+
 #header
 {
 	display: grid;
@@ -207,6 +200,17 @@ section h1:hover
 /* end Content */
 
 /* Utilities */
+a
+{
+	text-decoration: none;
+	color: inherit;
+}
+
+ul
+{
+	list-style-position: inside;
+}
+
 .no-select
 {
 	-webkit-touch-callout: none;
@@ -217,20 +221,114 @@ section h1:hover
   user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
-
-html.transition,
-html.transition body,
-html.transition body:before,
-html.transition body:after,
-html.transition section,
-html.transition section:before,
-html.transition section:after
-{
-    transition: all 700ms !important;
-    transition-delay: 0 !important;
-}
 /* end Utilities */
 
 /* Media Queries */
+@media only screen and (min-width: 500px)
+{
+	#container
+	{
+		height: auto;
+		width: 95vw;
+		margin: auto;
+		
+		transform: translate(0, 0);
 
+		box-shadow: none;
+		border-radius: 0;
+	}
+
+	#header
+	{
+		height: max-content;
+		padding-top: 10px;
+
+		background: none;
+		color: inherit;
+
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+	#my-name
+	{
+		text-align: left;
+		width: 100%;
+
+		line-height: normal;
+	}
+	#my-name span
+	{
+		display: inline;
+	}
+	#f-name
+	{
+		font-size: 3em;
+	}
+	#l-name
+	{
+		margin-left: 10px;
+		text-transform: unset;
+		letter-spacing: normal;
+	}
+	#specs
+	{
+		display: block !important;
+		font-size: 1.5em;
+	}
+
+	#projects
+	{
+		background: none;
+		color: inherit;
+	}
+	#projects .content
+	{
+		text-align: left;
+	}
+
+	#skills
+	{
+		margin-top: 30px;
+
+		background: none;
+		color: inherit;
+	}
+	#education
+	{
+		margin-top: 30px;
+
+		background: none;
+		color: inherit;
+	}
+	#work-exp
+	{
+		margin-top: 30px;
+
+		background: none;
+		color: inherit;
+
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	section h1
+	{
+		justify-items: stretch;
+		align-items: stretch;
+		margin-bottom: 10px;
+		padding: 0;
+
+		text-align: left;
+		font-size: 2em;
+	}
+	section h1:hover
+	{
+		cursor: default;
+	}
+	.content
+	{
+		display: block;
+		padding: 0;
+	}
+}
 /* end Media Queries */

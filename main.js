@@ -10,6 +10,11 @@ workExp.childNodes[1].addEventListener('click', changeDisplay);
 
 function changeDisplay(e)
 {
+	if (window.innerWidth >= 500)
+	{
+		return;
+	}
+	
 	let content = e.target.nextElementSibling;
 	let allContent = document.getElementsByClassName('content');
 	let allParent = document.getElementsByTagName('section');
@@ -33,39 +38,3 @@ function changeDisplay(e)
 		content.parentNode.style.boxShadow = 'none';
 	}
 }
-
-// function changeFont()
-// {
-// 	if (document.body.style.fontFamily === '' || document.body.style.fontFamily === 'Ubuntu')
-// 	{
-// 		document.body.style.fontFamily = 'Quicksand';
-// 	}
-// 	else
-// 	{
-// 		document.body.style.fontFamily = 'Ubuntu';
-// 	}
-// }
-
-// let x = 0;
-// function changeColor()
-// {
-// 	themeTransition();
-// 	let numThemes = ['yellow', 'blue', 'red', 'multi'];
-
-// 	if ((x + 1) >= numThemes.length)
-// 	{
-// 		x = 0;
-// 	}
-// 	else
-// 	{
-// 		x++;
-// 	}
-
-// 	document.documentElement.setAttribute('data-theme', numThemes[x]);
-// }
-
-// function themeTransition()
-// {
-//     document.documentElement.classList.add("transition");
-//     window.setTimeout(() => document.documentElement.classList.remove("transition"), 1000);
-// }
