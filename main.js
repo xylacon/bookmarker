@@ -3,6 +3,15 @@ let skills = document.getElementById('skills');
 let education = document.getElementById('education');
 let workExp = document.getElementById('work-exp');
 
+if (window.innerWidth >= 500)
+{
+	let allParent = document.getElementsByTagName('section');
+	for (i = 0; i < allParent.length; i++)
+		{
+			allParent[i].style.boxShadow = 'none';
+		}
+}
+
 projects.childNodes[1].addEventListener('click', changeDisplay);
 skills.childNodes[1].addEventListener('click', changeDisplay);
 education.childNodes[1].addEventListener('click', changeDisplay);
