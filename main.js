@@ -8,6 +8,33 @@ skills.childNodes[1].addEventListener('click', changeDisplay);
 education.childNodes[1].addEventListener('click', changeDisplay);
 workExp.childNodes[1].addEventListener('click', changeDisplay);
 
+let allContent = document.getElementsByClassName('content');
+let allParent = document.getElementsByTagName('section');
+window.addEventListener('resize', () =>
+{
+	if (window.innerWidth >= 500)
+	{
+		for (i = 0; i < allContent.length; i++)
+		{
+			allContent[i].style.display = 'block';
+		}
+		for (i = 0; i < allParent.length; i++)
+		{
+			allParent[i].style.boxShadow = 'none';
+		}
+	}
+	else
+	{
+		if ((allContent[1].style.display == 'block') && (allContent[2].style.display == 'block'))
+		{
+			for (i = 0; i < allContent.length; i++)
+			{
+				allContent[i].style.display = 'none';
+			}
+		}
+	}
+});
+
 function changeDisplay(e)
 {
 	if (window.innerWidth >= 500)
