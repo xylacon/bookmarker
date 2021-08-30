@@ -31,6 +31,10 @@ window.addEventListener('resize', () =>
 			{
 				allContent[i].style.display = 'none';
 			}
+			for (i = 0; i < allParent.length; i++)
+			{
+				allParent[i].style.boxShadow = 'none';
+			}
 		}
 	}
 });
