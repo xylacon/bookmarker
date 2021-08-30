@@ -23,8 +23,8 @@ html[data-theme="yellow"]
 	--education-bg: var(--primary-4);
 	--education-txt: var(--primary-1);
 	
-	--work-exp-bg: var(--primary-5);
-	--work-exp-txt: var(--primary-2);
+	--employment-bg: var(--primary-5);
+	--employment-txt: var(--primary-2);
 }
 /* end Colors */
 
@@ -87,7 +87,7 @@ body
 	text-align: right;
 }
 
-#work-exp h6
+#employment h6
 {
 	text-align: right;
 }
@@ -113,7 +113,7 @@ body
 		"projects"
 		"skills"
 		"education"
-		"work-exp";
+		"employment";
 	transform: translateY(2.5vh);
 
 	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
@@ -163,14 +163,14 @@ body
 	background: var(--education-bg);
 	color: var(--education-txt);
 }
-#work-exp
+#employment
 {
 	display: grid;
-	grid-area: work-exp;
+	grid-area: employment;
 	grid-template-columns: 1fr;
 
-	background: var(--work-exp-bg);
-	color: var(--work-exp-txt);
+	background: var(--employment-bg);
+	color: var(--employment-txt);
 
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
@@ -241,7 +241,7 @@ ul
 	{
 		height: 94vh;
 		width: 90vw;
-		max-width: 1400px;
+		max-width: 1200px;
 		margin-bottom: 10px;
 
 		grid-template-columns: 1fr 1fr;
@@ -249,7 +249,7 @@ ul
 		grid-template-areas:
 		"header header"
 		"projects skills"
-		"education work-exp";
+		"education employment";
 		gap: 10px;
 
 		box-shadow: none;

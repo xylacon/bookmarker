@@ -1,7 +1,7 @@
 let projects = document.getElementById('projects');
 let skills = document.getElementById('skills');
 let education = document.getElementById('education');
-let workExp = document.getElementById('work-exp');
+let workExp = document.getElementById('employment');
 
 projects.childNodes[1].addEventListener('click', changeDisplay);
 skills.childNodes[1].addEventListener('click', changeDisplay);
