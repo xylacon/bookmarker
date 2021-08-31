@@ -239,10 +239,9 @@ ul
 {
 	#container
 	{
-		height: 86vh;
+		height: 84vh;
 		width: 90vw;
 		max-width: 1200px;
-		margin-bottom: 10px;
 
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 150px 1fr 1fr;
@@ -294,7 +293,7 @@ ul
 	}
 	section:not(:first-of-type)
 	{
-		min-height: 150px;
+		min-height: 200px;
 	}
 	section h1
 	{
