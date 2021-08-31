@@ -1,7 +1,7 @@
 /* Colors */
 html[data-theme="yellow"]
 {
-	--bg: rgb(32, 32, 32);
+	--bg: rgb(34, 34, 34);
 	--txt: rgb(235, 235, 235);
 
 	--primary-1: rgb(255, 228, 154);
