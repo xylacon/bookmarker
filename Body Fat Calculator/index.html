@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="style.css">
+		<script src="https://kit.fontawesome.com/0e5192ae56.js" crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<title>Body Fat Calculator</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>Body Fat Calculator</h1>
+			</div>
+			<div class="section">
+				<div class="result-circle">
+					<div id="result">99%</div>
+				</div>
+				<div id="method-list" class="panel">
+					<div class="description">
+						<p>Methods</p>
+						<i class="fas fa-chevron-right"></i>
+					</div>
+					<div id="methods" class="card">
+						<div id="all" class="card-item checked">
+							<i class="fas fa-check-square"></i> All
+						</div>
+						<div id="hodgdon-beckett" class="card-item">
+							<i class="far fa-square"></i> Hodgdon & Beckett
+						</div>
+					</div>
+				</div>
+				Height <input type="number" name="height" id="height" class="input">
+				Abdomen <input type="number" name="abdomen" id="abdomen" class="input">
+				Neck <input type="number" name="neck" id="neck" class="input">
+			</div>
+		</div>
+		<script src="main.js"></script>
+	</body>
+</html>
