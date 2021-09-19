@@ -107,10 +107,10 @@ body
 	opacity: 0;
 
 	font-size: 0;
-	-webkit-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 50ms ease-in-out;
-	-moz-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 50ms ease-in-out;
-	-o-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 50ms ease-in-out;
-	transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 50ms ease-in-out;
+	-webkit-transition: font-size 300ms, opacity 300ms, padding 300ms;
+	-moz-transition: font-size 300ms, opacity 300ms, padding 300ms;
+	-o-transition: font-size 300ms, opacity 300ms, padding 300ms;
+	transition: font-size 300ms, opacity 300ms, padding 300ms;
 }
 .card-item
 {
