@@ -107,12 +107,10 @@ body
 	opacity: 0;
 
 	font-size: 0;
-	-webkit-transition: font-size 300ms, opacity 300ms, padding 300ms;
-	-moz-transition: font-size 300ms, opacity 300ms, padding 300ms;
-	-o-transition: font-size 300ms, opacity 300ms, padding 300ms;
-	transition: font-size 300ms, opacity 300ms, padding 300ms;
-	-webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
+	-webkit-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), padding 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89);
+	-moz-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), padding 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89);
+	-o-transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), padding 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89);
+	transition: font-size 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), opacity 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89), padding 300ms cubic-bezier(0.13, 1.52, 0.87, 0.89);
 }
 .card-item
 {
