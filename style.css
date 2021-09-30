@@ -22,9 +22,11 @@ html[data-theme="yellow"]
 	
 	--education-bg: var(--primary-4);
 	--education-txt: var(--primary-1);
+	--education-txt-secondary: var(--primary-2);
 	
 	--employment-bg: var(--primary-5);
 	--employment-txt: var(--primary-2);
+	--employment-txt-secondary: var(--primary-3);
 }
 /* end Colors */
 
@@ -85,11 +87,13 @@ body
 #education h6
 {
 	text-align: right;
+	color: var(--education-txt-secondary);
 }
 
 #employment h6
 {
 	text-align: right;
+	color: var(--employment-txt-secondary);
 }
 
 .item:not(:first-of-type)
