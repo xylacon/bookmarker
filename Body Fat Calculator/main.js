@@ -1,11 +1,31 @@
+// Global variables
+var age = document.getElementById('age');
 var height = document.getElementById('height');
-var abdomen = document.getElementById('abdomen');
+var waist = document.getElementById('waist');
+var hip = document.getElementById('hip');
+var thigh = document.getElementById('thigh');
+var upperArm = document.getElementById('upper-arm');
+var forearm = document.getElementById('forearm');
+var calf = document.getElementById('calf');
 var neck = document.getElementById('neck');
 
+var sexVal;
+var ageVal;
 var heightVal;
-var abdomenVal;
+var waistVal;
+var hipVal;
+var thighVal;
+var upperArmVal;
+var forearmVal;
+var calfVal;
 var neckVal;
 var bodyFatA;
+var bodyFatB;
+
+const allMethods = Array.from(document.getElementById('methods').getElementsByTagName('div'));
+var activeMethods = [];
+
+updateMethodArray();
 
 // Event Listeners
 document.querySelectorAll('.description').forEach(i =>
@@ -16,6 +36,10 @@ document.getElementById('methods').querySelectorAll('.card-item').forEach(i =>
 	{
 		i.addEventListener('click', updateMethods)
 	});
+document.getElementById('basic-info').querySelectorAll('.card-item').forEach(i =>
+	{
+		i.addEventListener('click', updateGender)
+	});
 document.querySelectorAll('.input').forEach(i =>
 	{
 		i.addEventListener('keyup', updateVal)
@@ -24,24 +48,32 @@ document.querySelectorAll('.input').forEach(i =>
 // Functions
 function updateVal()
 {
+	ageVal = age.value;
 	heightVal = height.value;
-	abdomenVal = abdomen.value;
+	waistVal = waist.value;
+	hipVal = hip.value;
+	thighVal = thigh.value;
+	upperArmVal = upperArm.value;
+	forearmVal = forearm.value;
+	calfVal = calf.value;
 	neckVal = neck.value;
 
-	if ((heightVal.length /= 0) && (abdomenVal.length /= 0) && (neckVal.length /= 0))
-	{
-		hodgdonBeckett();
-	}
+	// if ((heightVal.length /= 0) && (abdomenVal.length /= 0) && (neckVal.length /= 0))
+	// {
+	// 	hodgdonBeckett();
+	// }
+	hodgdonBeckett();
+	katchMcardle();
 
 	// at the end, call a function that will check the values of all bodyFats and deal with greying them out on the DOM
 }
 
 function openPanel(e)
 {
-	let panel = e.target.closest('.panel');
-	let icon = panel.getElementsByTagName('i')[0];
-	let card = panel.getElementsByClassName('card')[0];
-	let cardItem = card.getElementsByClassName('card-item');
+	const panel = e.target.closest('.panel');
+	const icon = panel.getElementsByTagName('i')[0];
+	const card = panel.getElementsByClassName('card')[0];
+	const cardItem = card.getElementsByClassName('card-item');
 
 	if (panel.classList.contains('active'))
 	{
@@ -71,21 +103,94 @@ function openPanel(e)
 
 function updateMethods(e)
 {
-	let method = e.target.closest('.card-item');
-	let icon = method.getElementsByTagName('i')[0];
+	let currentMethods = allMethods;
+	const method = e.target.closest('.card-item');
+	const icon = method.getElementsByTagName('i')[0];
+	const all = document.getElementById('all');
 
 	if (method.classList.contains('checked'))
 	{
-		method.classList.remove('checked');
-		icon.className = '';
-		icon.className = 'far fa-square';
+		if (method.dataset.value == 'all')
+		{
+			currentMethods.forEach((item) =>
+			{
+				item.classList.remove('checked');
+				item.getElementsByTagName('i')[0].className = '';
+				item.getElementsByTagName('i')[0].className = 'far fa-square';
+			});
+		}
+		else
+		{
+			method.classList.remove('checked');
+			icon.className = '';
+			icon.className = 'far fa-square';
+		}
 	}
 	else
 	{
-		method.classList.add('checked');
-		icon.className = '';
-		icon.className = 'fas fa-check-square';
+		if (method.dataset.value == 'all')
+		{
+			currentMethods.forEach((item) =>
+			{
+				item.classList.add('checked');
+				item.getElementsByTagName('i')[0].className = '';
+				item.getElementsByTagName('i')[0].className = 'fas fa-check-square';
+			});
+		}
+		else
+		{
+			method.classList.add('checked');
+			icon.className = '';
+			icon.className = 'fas fa-check-square';
+		}
 	}
+
+	currentMethods = currentMethods.filter(item => item.classList.contains('checked') && item.dataset.value != 'all');
+
+	if ((currentMethods.length + 1) < allMethods.length)
+	{
+		all.classList.remove('checked');
+		all.getElementsByTagName('i')[0].className = '';
+		all.getElementsByTagName('i')[0].className = 'far fa-square';
+	}
+	else
+	{
+		all.classList.add('checked');
+		all.getElementsByTagName('i')[0].className = '';
+		all.getElementsByTagName('i')[0].className = 'fas fa-check-square';
+	}
+
+	updateMethodArray();
+}
+
+function updateMethodArray()
+{
+	activeMethods = [];
+	let methods = allMethods;
+	methods = methods.filter(item => item.classList.contains('checked') && item.dataset.value != 'all');
+	methods.forEach((item) => activeMethods.push(item.dataset.value));
+}
+
+function updateGender(e)
+{
+	const radioButton = e.target.closest('.card-item');
+	const icon = radioButton.querySelector('.circle-sm');
+	const male = document.getElementById('male');
+	const female = document.getElementById('female');
+	
+	if (radioButton.dataset.value == male.dataset.value)
+	{
+		sexVal = male.dataset.value;
+	}
+	if (radioButton.dataset.value == female.dataset.value)
+	{
+		sexVal = female.dataset.value;
+	}
+
+	male.querySelector('.circle-sm').style.padding = '8px';
+	female.querySelector('.circle-sm').style.padding = '8px';
+
+	icon.style.padding = '4px';
 }
 
 function checkValues(bodyFat)
@@ -103,7 +208,45 @@ function hodgdonBeckett()
 {
 	bodyFatA = 0;
 	
-	bodyFatA = 86.010 * Math.log10(abdomenVal - neckVal) - 70.041 * Math.log10(heightVal) + 36.76;
+	if (sexVal == 'male')
+	{
+		bodyFatA = 86.010 * Math.log10(waistVal - neckVal) - 70.041 * Math.log10(heightVal) + 36.76;
+	}
+	if (sexVal == 'female')
+	{
+		console.log(bodyFatA);
+		bodyFatA = 163.205 * Math.log10(waistVal + hipVal - neckVal) - 97.684 * Math.log10(heightVal) - 78.387;
+	}
 
 	console.log(bodyFatA);
+}
+
+function katchMcardle()
+{
+	bodyFatB = 0;
+	
+	if (sexVal == 'male')
+	{
+		if ((ageVal >= 17) && (ageVal <= 26))
+		{
+			bodyFatB = (upperArmVal * 1.34) + (thigh * 2.08) - (forearm * 4.31) - 19.6;
+		}
+		if (age > 26)
+		{
+			bodyFatB = (waist * 1.19) + (thigh * 1.24) - (calf * 1.45) - 18.4;
+		}
+	}
+	if (sexVal == 'female')
+	{
+		if ((ageVal >= 17) && (ageVal <= 26))
+		{
+			bodyFatB = (waistVal * 1.34) + (thighVal * 2.08) - (forearmVal * 4.31) - 19.6;
+		}
+		if (age > 26)
+		{
+			bodyFatB = (waistVal * 1.19) + (thighVal * 1.24) - (calfVal * 1.45) - 18.4;
+		}
+	}
+
+	// console.log(bodyFatB);
 }

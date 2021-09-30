@@ -15,8 +15,10 @@
 	</head>
 	<body>
 		<div class="container">
+			<!-- <div id="stop">Can you stop???</div> -->
 			<div class="header">
 				<h1>Body Fat Calculator</h1>
+				<h3 style="color: red; text-align: center;">**Under Construction**</h3>
 			</div>
 			<div class="section">
 				<div class="result-circle">
@@ -28,16 +30,52 @@
 						<i class="fas fa-chevron-right"></i>
 					</div>
 					<div id="methods" class="card">
-						<div id="all" class="card-item checked">
+						<div id="all" class="card-item checked" data-value="all">
 							<i class="fas fa-check-square"></i> All
 						</div>
-						<div id="hodgdon-beckett" class="card-item">
-							<i class="far fa-square"></i> Hodgdon & Beckett
+						<div id="hodgdon-beckett" class="card-item checked" data-value="hodgdon-beckett">
+							<i class="fas fa-check-square"></i> Hodgdon & Beckett
+						</div>
+						<div id="katch-mcardle" class="card-item checked" data-value="katch-mcardle">
+							<i class="fas fa-check-square"></i> Katch & McArdle
+						</div>
+						<div id="jackson-pollock" class="card-item checked" data-value="jackson-pollock">
+							<i class="fas fa-check-square"></i> Jackson & Pollock
+						</div>
+						<div id="sloan" class="card-item checked" data-value="sloan">
+							<i class="fas fa-check-square"></i> Sloan
+						</div>
+						<div id="durnin-womersley" class="card-item checked" data-value="durnin-womersley">
+							<i class="fas fa-check-square"></i> Durnin & Womersley
+						</div>
+						<div id="slaughter-lohman" class="card-item checked" data-value="slaughter-lohman">
+							<i class="fas fa-check-square"></i> Slaughter-Lohman
+						</div>
+						<div id="parillo-caliper" class="card-item checked" data-value="parillo-caliper">
+							<i class="fas fa-check-square"></i> Parillo Caliper
+						</div>
+						<div id="yuhasz" class="card-item checked" data-value="yuhasz">
+							<i class="fas fa-check-square"></i> Yuhasz
 						</div>
 					</div>
 				</div>
+				<div id="basic-info">
+					Sex:
+					<div id="male" class="card-item" data-value="male">
+						<span class="circle-lg"><span class="circle-sm"></span></span>Male
+					</div>
+					<div id="female" class="card-item" data-value="female">
+						<span class="circle-lg"><span class="circle-sm"></span></span>Female
+					</div>
+				</div>
+				Age <input type="number" name="age" id="age" class="input">
 				Height <input type="number" name="height" id="height" class="input">
-				Abdomen <input type="number" name="abdomen" id="abdomen" class="input">
+				Waist <input type="number" name="waist" id="waist" class="input">
+				Hip <input type="number" name="hip" id="hip" class="input">
+				Thigh <input type="number" name="thigh" id="thigh" class="input">
+				Upper Arm <input type="number" name="upper-arm" id="upper-arm" class="input">
+				Forearm <input type="number" name="forearm" id="forearm" class="input">
+				Calf <input type="number" name="calf" id="calf" class="input">
 				Neck <input type="number" name="neck" id="neck" class="input">
 			</div>
 		</div>
