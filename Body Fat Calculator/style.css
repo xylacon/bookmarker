@@ -9,7 +9,7 @@ html[data-theme="light"]
 	--bg-2: rgb(235, 235, 235);
 	--bg-3: rgb(190, 190, 190);
 	--txt: rgb(0, 0, 0);
-	--circle: rgb(0, 104, 202);
+	--circle: rgb(233, 13, 60);
 }
 /* end Variables */
 
@@ -33,6 +33,7 @@ body
 	width: 90vw;
 	max-width: 768px;
 	margin: auto;
+	color: var(--txt);
 }
 /* end Global */
 
@@ -49,29 +50,99 @@ body
 /* end Header */
 
 /* Section */
+
 /* Result */
-.result-circle
+.results
 {
 	display: grid;
-	height: 20vh;
-	width: 20vh;
-	margin: 20px auto;
-	justify-content: center;
-	align-content: center;
-
-	border: 1px solid var(--circle);
-	border-radius: 50%;
-
-	font-size: 7vh;
-
-	background: var(--circle);
-	color: var(--bg-2);
 }
-.result-circle:hover
+
+#result-panel
 {
-	cursor: pointer;
-	outline: 5px solid var(--bg-2);
-	box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+	position: absolute;
+
+	width: fit-content;
+	max-width: 95vh;
+	height: fit-content;
+	padding: 20px;
+	overflow: hidden;
+	border-radius: 15px;
+	clip-path: circle(15% at 50% 14%);
+	transition: clip-path 300ms, background-color 300ms;
+
+	justify-self: center;
+	align-self: start;
+
+	font-size: 1em;
+
+	backdrop-filter: blur(10px);
+	background: var(--circle);
+}
+#result-panel:hover
+{
+	height: fit-content;
+	clip-path: circle(75%);
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgba(190, 190, 190, 0.5);
+}
+.item
+{
+	display: flex;
+	column-gap: 60px;
+	justify-content: space-between;
+	padding: 10px 0;
+	color: rgba(0, 0, 0, 0);
+	transition: color 300ms, border 300ms;
+}
+#result-panel:hover .item
+{
+	font-size: inherit;
+	color: inherit;
+	border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+.item div
+{
+	display: inline;
+	align-self: flex-end;
+}
+#average
+{
+	margin-top: 20px;
+	font-size: 24px;
+	padding-top: 0;
+	padding-bottom: 20px;
+	flex-direction: column;
+	font-weight: bold;
+	color: var(--bg);
+	border: none !important;
+	transition: margin 300ms, color 300ms, font-size 300ms;
+}
+#result-panel:hover #average
+{
+	margin: 0;
+}
+#average-result
+{
+	align-self: center;
+	font-size: 2em;
+}
+#average-title
+{
+	align-self: center;
+	color: rgba(0, 0, 0, 0);
+	transition: color 300ms;
+}
+#result-panel:hover #average-title
+{
+	color: inherit;
+}
+
+/* Method List */
+#method-list
+{
+	margin-top: 175px;
 }
 
 /* Basic info */
@@ -128,12 +199,9 @@ body
 	justify-content: space-between;
 	align-content: center;
 	padding: 5px 10px;
+	cursor: pointer;
 
 	font-size: 1.5em;
-}
-.description:hover
-{
-	cursor: pointer;
 }
 .description i
 {
@@ -142,10 +210,10 @@ body
 	color: var(--bg-3);
 	font-size: 0.9em;
 
-	-webkit-transition: transform 300ms var(--transition-cubic);
-	-moz-transition: transform 300ms var(--transition-cubic);
-	-o-transition: transform 300ms var(--transition-cubic);
-	transition: transform 300ms var(--transition-cubic);
+	-webkit-transition: transform 300ms;
+	-moz-transition: transform 300ms;
+	-o-transition: transform 300ms;
+	transition: transform 300ms;
 }
 
 .card
@@ -158,18 +226,18 @@ body
 
 	font-size: 0;
 
-	-webkit-transition: font-size 300ms var(--transition-cubic), opacity 300ms, padding 300ms var(--transition-cubic);
-	-moz-transition: font-size 300ms var(--transition-cubic), opacity 300ms, padding 300ms var(--transition-cubic);
-	-o-transition: font-size 300ms var(--transition-cubic), opacity 300ms, padding 300ms var(--transition-cubic);
-	transition: font-size 300ms var(--transition-cubic), opacity 300ms, padding 300ms var(--transition-cubic);
+	-webkit-transition: font-size 300ms, opacity 1000ms, padding 300ms;
+	-moz-transition: font-size 300ms, opacity 1000ms, padding 300ms;
+	-o-transition: font-size 300ms, opacity 1000ms, padding 300ms;
+	transition: font-size 300ms, opacity 1000ms, padding 300ms;
 }
 .card-item
 {
 	border-radius: 3px;
+	cursor: pointer;
 }
 .card-item:hover
 {
-	cursor: pointer;
 	background: rgba(0, 0, 0, 0.1);
 }
 
@@ -194,15 +262,3 @@ input
 	-webkit-tap-highlight-color: transparent;
 }
 /* end Utilities */
-
-
-#stop
-{
-	position: absolute;
-	top: 25%;
-	left: 43.5%;
-	padding: 25px;
-	backdrop-filter: blur(5px);
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 10px;
-}
