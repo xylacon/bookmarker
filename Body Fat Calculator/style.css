@@ -77,15 +77,22 @@ body
 
 	backdrop-filter: blur(10px);
 	background: var(--circle);
-}
-#result-panel:hover
-{
+
 	height: fit-content;
 	clip-path: circle(75%);
 	overflow: scroll;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background: rgba(190, 190, 190, 0.5);
+}
+#result-panel:hover
+{
+	/* height: fit-content;
+	clip-path: circle(75%);
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background: rgba(190, 190, 190, 0.5); */
 }
 .item
 {
