@@ -64,6 +64,7 @@ body
 	width: fit-content;
 	max-width: 95vh;
 	height: fit-content;
+	max-height: min-content;
 	padding: 20px;
 	overflow: hidden;
 	border-radius: 15px;
@@ -78,21 +79,15 @@ body
 	backdrop-filter: blur(10px);
 	background: var(--circle);
 
-	height: fit-content;
+	clip-path: circle(75%);
+}
+#result-panel:hover
+{
 	clip-path: circle(75%);
 	overflow: scroll;
 	overflow-x: hidden;
 	overflow-y: auto;
 	background: rgba(190, 190, 190, 0.5);
-}
-#result-panel:hover
-{
-	/* height: fit-content;
-	clip-path: circle(75%);
-	overflow: scroll;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: rgba(190, 190, 190, 0.5); */
 }
 .item
 {
