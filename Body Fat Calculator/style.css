@@ -77,9 +77,8 @@ body
 	font-size: 1em;
 
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	background: var(--circle);
-
-	clip-path: circle(75%);
 }
 #result-panel:hover
 {
