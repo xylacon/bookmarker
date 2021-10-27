@@ -28,6 +28,7 @@ var activeMethods = [];
 updateMethodArray();
 
 // Event Listeners
+document.getElementById('result-panel').addEventListener('click', showResults);
 document.querySelectorAll('.description').forEach(i =>
 	{
 		i.addEventListener('click', openPanel)
@@ -66,6 +67,52 @@ function updateVal()
 	katchMcardle();
 
 	// at the end, call a function that will check the values of all bodyFats and deal with greying them out on the DOM
+}
+
+function showResults(e)
+{
+	const panel = e.target.closest('#result-panel');
+	const items = panel.getElementsByClassName('item');
+	const average = document.getElementById('average');
+	const averageTitle = document.getElementById('average-title');
+
+	if (panel.classList.contains('active'))
+	{
+		panel.classList.remove('active');
+		panel.style.cursor = 'pointer';
+		panel.style.clipPath = 'circle(15% at 50% 14%)';
+		panel.style.overflow = 'hidden';
+		panel.style.backgroundColor = 'var(--circle)';
+		for (item of items)
+		{
+			item.style.fontSize = '1em';
+			item.style.color = 'rgba(0, 0, 0, 0)';
+			item.style.borderTop = 'none';
+		}
+		average.style.marginTop = '20px';
+		average.style.alignSelf = 'center';
+		average.style.fontSize = '24px';
+		average.style.color = 'var(--bg)';
+		averageTitle.style.color = 'rgba(0, 0, 0, 0)';
+	}
+	else
+	{
+		panel.classList.add('active');
+		panel.style.cursor = 'auto';
+		panel.style.clipPath = 'circle(75%)';
+		panel.style.overflow = 'scroll';
+		panel.style.overflowX = 'hidden';
+		panel.style.overflowY = 'auto';
+		panel.style.backgroundColor = 'rgba(190, 190, 190, 0.5)';
+		for (item of items)
+		{
+			item.style.fontSize = 'inherit';
+			item.style.color = 'inherit';
+			item.style.borderTop = '1px solid rgba(0, 0, 0, 0.3)';
+		}
+		average.style.margin = '0';
+		averageTitle.style.color = 'inherit';
+	}
 }
 
 function openPanel(e)

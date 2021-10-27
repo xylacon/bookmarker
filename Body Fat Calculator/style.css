@@ -60,6 +60,7 @@ body
 #result-panel
 {
 	position: absolute;
+	cursor: pointer;
 
 	width: fit-content;
 	max-width: 95vh;
@@ -80,14 +81,6 @@ body
 	-webkit-backdrop-filter: blur(10px);
 	background: var(--circle);
 }
-#result-panel:hover
-{
-	clip-path: circle(75%);
-	overflow: scroll;
-	overflow-x: hidden;
-	overflow-y: auto;
-	background: rgba(190, 190, 190, 0.5);
-}
 .item
 {
 	display: flex;
@@ -97,12 +90,6 @@ body
 	color: rgba(0, 0, 0, 0);
 	transition: color 300ms, border 300ms;
 }
-#result-panel:hover .item
-{
-	font-size: inherit;
-	color: inherit;
-	border-top: 1px solid rgba(0, 0, 0, 0.3);
-}
 .item div
 {
 	display: inline;
@@ -110,6 +97,7 @@ body
 }
 #average
 {
+	cursor: pointer;
 	margin-top: 20px;
 	font-size: 24px;
 	padding-top: 0;
@@ -119,10 +107,6 @@ body
 	color: var(--bg);
 	border: none !important;
 	transition: margin 300ms, color 300ms, font-size 300ms;
-}
-#result-panel:hover #average
-{
-	margin: 0;
 }
 #average-result
 {
@@ -134,10 +118,6 @@ body
 	align-self: center;
 	color: rgba(0, 0, 0, 0);
 	transition: color 300ms;
-}
-#result-panel:hover #average-title
-{
-	color: inherit;
 }
 
 /* Method List */
