@@ -79,7 +79,6 @@ function showResults(e)
 	if (panel.classList.contains('active'))
 	{
 		panel.classList.remove('active');
-		panel.style.cursor = 'pointer';
 		panel.style.clipPath = 'circle(15% at 50% 14%)';
 		panel.style.overflow = 'hidden';
 		panel.style.backgroundColor = 'var(--circle)';
@@ -98,7 +97,6 @@ function showResults(e)
 	else
 	{
 		panel.classList.add('active');
-		panel.style.cursor = 'auto';
 		panel.style.clipPath = 'circle(75%)';
 		panel.style.overflow = 'scroll';
 		panel.style.overflowX = 'hidden';
@@ -278,7 +276,7 @@ function katchMcardle()
 		{
 			bodyFatB = (upperArmVal * 1.34) + (thigh * 2.08) - (forearm * 4.31) - 19.6;
 		}
-		if (age > 26)
+		if (ageVal > 26)
 		{
 			bodyFatB = (waist * 1.19) + (thigh * 1.24) - (calf * 1.45) - 18.4;
 		}
@@ -289,7 +287,7 @@ function katchMcardle()
 		{
 			bodyFatB = (waistVal * 1.34) + (thighVal * 2.08) - (forearmVal * 4.31) - 19.6;
 		}
-		if (age > 26)
+		if (ageVal > 26)
 		{
 			bodyFatB = (waistVal * 1.19) + (thighVal * 1.24) - (calfVal * 1.45) - 18.4;
 		}
