@@ -167,14 +167,13 @@ a:hover {
 		position: fixed;
 		top: 0;
 		left: 0;
-		height: 0;
+		height: 0.5px;
 		padding: 0;
 
 		flex-direction: column;
 		font-size: 2em;
 
 		background: rgba(0, 0, 0, 0.3);
-		box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 		backdrop-filter: blur(5px contrast(80%));
 		-webkit-backdrop-filter: blur(5px) contrast(80%);
 		transition: height 200ms, padding 200ms;
@@ -212,6 +211,9 @@ a:hover {
 	#menu-toggle:checked ~ .nav-links {
     height: 50vh;
 		padding: 75px 0 25px 0;
+
+		box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+
 		transition: height 200ms, padding 200ms;
 	}
   #menu-toggle:checked ~ .nav-links li {
