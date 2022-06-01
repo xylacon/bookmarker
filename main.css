@@ -17,7 +17,9 @@
 	width: 100%;
 }
 
-a {
+.arrow-link {
+	width: fit-content;
+	
 	display: flex;
 	align-items: center;
 	gap: 5px;
@@ -25,12 +27,15 @@ a {
 	color: var(--txt-link);
 	text-decoration: none;
 }
-a svg {
+.arrow-link svg {
 	width: 12px;
 	fill: var(--txt-link);
 	transition: margin 200ms;
 }
-a:hover svg {
+.arrow-link:hover {
+	text-decoration: underline;
+}
+.arrow-link:hover svg {
 	margin-left: 7px;
 }
 
