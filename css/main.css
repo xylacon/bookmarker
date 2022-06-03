@@ -1,0 +1,161 @@
+.arrow-link {
+	width: fit-content;
+	
+	display: flex;
+	align-items: center;
+	gap: 5px;
+
+	color: var(--txt-link);
+	text-decoration: none;
+}
+.arrow-link svg {
+	width: 12px;
+	fill: var(--txt-link);
+	transition: margin 200ms;
+}
+.arrow-link:hover {
+	text-decoration: underline;
+}
+.arrow-link:hover svg {
+	margin-left: 7px;
+}
+
+/* Portrait */
+.img-container {
+	max-height: 40%;
+	display: flex;
+	border-bottom: 1px solid var(--bg-footer);
+}
+img {
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+/* end Portrait */
+
+.content {
+	flex-grow: 1;
+	overflow: scroll;
+	padding-top: var(--margin);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--margin);
+}
+.content > * {
+	width: 100%;
+	padding: 0 var(--margin-medium);
+}
+
+/* Header */
+header {
+	align-self: center;
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	gap: var(--margin-small);
+}
+
+#person-info h1 {
+	font-size: 2.15rem;
+	font-weight: 500;
+	line-height: 1.2;
+}
+#person-info h3 {
+	font-weight: 400;
+}
+#person-info h4 {
+	font-weight: 300;
+}
+#person-info h3,
+#person-info h4 {
+	color: var(--txt-2);
+}
+
+#contact-info {
+	display: flex;
+	justify-content: center;
+	gap: var(--margin);
+}
+.btn {
+	width: 50%;
+	max-width: 150px;
+	padding: var(--margin-small);
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: var(--margin-small);
+	
+	color: var(--txt-btn);
+	font-family: inherit;
+	font-size: 1rem;
+	font-weight: 500;
+	text-decoration: none;
+
+	background-color: var(--txt);
+	outline: none;
+	border: none;
+	border: 2px solid var(--txt);
+	border-radius: 7px;
+
+	transition: color 200ms, background-color 200ms;
+}
+.btn svg {
+	width: 18px;
+	fill: var(--txt-btn);
+	transition: fill 200ms;
+}
+.btn:hover {
+	color: var(--txt);
+	background-color: var(--bg-container);
+}
+.btn:hover svg {
+	fill: var(--txt);
+}
+
+#linkedin {
+	color: white;
+	background-color: var(--linkedin);
+	border: 2px solid var(--linkedin);
+}
+#linkedin svg {
+	fill: white;
+}
+#linkedin:hover {
+	color: var(--linkedin);
+	background-color: var(--bg-container);
+}
+#linkedin:hover svg {
+	fill: var(--linkedin);
+}
+/* end Header */
+
+/* Main */
+main {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: var(--margin-medium);
+}
+
+section h3 {
+	font-weight: 500;
+}
+section p {
+	margin-top: calc(var(--margin-small) / 2);
+	color: var(--txt-2);
+}
+/* end Main */
+
+@media screen and (min-aspect-ratio: 11/10) {
+	.img-container {
+		max-height: none;
+		max-width: 40%;
+		border: none;
+		border-right: 1px solid var(--bg-footer);
+	}
+}
