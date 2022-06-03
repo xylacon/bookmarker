@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="viewport" content="width=device-width, initial-scale=1>
 	<meta name="theme-color" content="#ffffff" />
 
 	<link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -14,7 +14,7 @@
 		href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
 		rel="stylesheet"
 	>
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="/css/main.css">
 	<style>
 		:root {
 			--margin: 20px;
@@ -47,10 +47,6 @@
 			--linkedin: rgb(14, 118, 168);
 		}
 
-		/* html {
-			padding: env(safe-area-inset);
-		} */
-
 		* {
 			margin: 0;
 			padding: 0;
@@ -75,6 +71,50 @@
 
 			color: var(--txt);
 			background-color: var(--bg);
+		}
+
+		.container {
+			width: 100%;
+			height: 100%;
+			max-width: 550px;
+			max-height: 950px;
+			overflow: hidden;
+			/* transform needed for Safari bug not following overflow: hidden */
+			transform: translateZ(0);
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+
+			background-color: var(--bg-container);
+			border-radius: 30px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+		}
+		.container > * {
+			width: 100%;
+		}
+
+		.content {
+			flex-grow: 1;
+			overflow: scroll;
+			padding-top: var(--margin);
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			gap: var(--margin);
+		}
+		.content > * {
+			width: 100%;
+			padding: 0 var(--margin-medium);
+		}
+
+		@media screen and (min-aspect-ratio: 11/10) {
+			.container {
+				max-width: 1250px;
+				max-height: 550px;
+				flex-direction: row;
+			}
 		}
 	</style>
 	<title>Richard Denton</title>
@@ -132,6 +172,7 @@
 					</p>
 				</section>
 			</main>
+			<link rel="stylesheet" href="/css/footer.css">
 			<footer>
 				<a class="social-link" href="https://github.com/xylacon/" target="_blank" rel="noreferrer">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
