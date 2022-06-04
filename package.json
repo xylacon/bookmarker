@@ -1,0 +1,30 @@
+{
+  "name": "business-card",
+  "version": "0.1.0",
+  "description": "Business card",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xylacon/xylacon.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xylacon/xylacon.github.io/issues"
+  },
+  "browserslist": [
+    ">0.2%",
+    "last 2 versions",
+    "not dead",
+    "not op_mini all"
+  ],
+  "dependencies": {
+    "imagemin-webp": "^7.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
