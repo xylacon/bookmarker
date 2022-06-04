@@ -107,7 +107,8 @@ body {
 	max-width: none;
 	display: flex;
 	border-bottom: 1px solid var(--bg-footer);
-	
+	-webkit-transform: translateZ(0);
+	        transform: translateZ(0);
 }
 img {
 	width: 100%;
@@ -117,7 +118,6 @@ img {
 /* end Portrait */
 
 .content {
-	flex-grow: 1;
 	overflow: scroll;
 	padding-top: var(--margin);
 
