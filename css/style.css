@@ -71,7 +71,7 @@ body {
 
 	background-color: var(--bg-container);
 	border-radius: 30px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);
 }
 .container > * {
 	width: 100%;
@@ -104,8 +104,10 @@ body {
 /* Portrait */
 .img-container {
 	max-height: 40%;
+	max-width: none;
 	display: flex;
 	border-bottom: 1px solid var(--bg-footer);
+	
 }
 img {
 	width: 100%;
