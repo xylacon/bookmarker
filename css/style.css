@@ -80,11 +80,14 @@ body {
 
 /* Portrait */
 .img-container {
+	min-width: none;
+	max-width: none;
 	min-height: 40%;
 	max-height: 40%;
-	width: 100%;
 	display: flex;
 	border-bottom: 1px solid var(--bg-footer);
+	-webkit-transform: translateZ(0);
+	        transform: translateZ(0);
 }
 img {
 	width: 100%;
@@ -242,9 +245,11 @@ section p {
 		flex-direction: row;
 	}
 	.img-container {
-		height: 100%;
 		min-width: 40%;
 		max-width: 40%;
+		min-height: none;
+		max-height: none;
+		
 		border: none;
 		border-right: 1px solid var(--bg-footer);
 	}
