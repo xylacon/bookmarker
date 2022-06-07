@@ -81,6 +81,7 @@ body {
 /* Portrait */
 .img-container {
 	min-height: 40%;
+	max-height: 40%;
 	width: 100%;
 	display: flex;
 	border-bottom: 1px solid var(--bg-footer);
@@ -243,6 +244,7 @@ section p {
 	.img-container {
 		height: 100%;
 		min-width: 40%;
+		max-width: 40%;
 		border: none;
 		border-right: 1px solid var(--bg-footer);
 	}
